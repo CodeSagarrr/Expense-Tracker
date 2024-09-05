@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+      // components
       <div className="App">
             <h1>Expense Tracker</h1>
             <ExpenseForm />
