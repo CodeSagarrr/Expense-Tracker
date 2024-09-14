@@ -1,16 +1,16 @@
 export const initialState = {
     expenses: [],
-}
+} // initial state empty array
 
 export const expensesReducer = (state, action) => {
     switch (action.type) {
-        case 'ADD_EXPENSE':
+        case 'ADD_EXPENSE': // action type
             return {
                 ...state,
-                expenses: [...state.expenses, action.payload]
+                expenses: [...state.expenses, action.payload] 
             };
 
-        case 'EDIT_EXPENSE':
+        case 'EDIT_EXPENSE': // action type
             return {
                 ...state,
                 expenses: state.expenses.map(expenses => {
@@ -18,7 +18,7 @@ export const expensesReducer = (state, action) => {
                 })
             }
         
-        case 'DELETE_EXPENSE':
+        case 'DELETE_EXPENSE': // action type
             return {
                 ...state,
                 expenses: state.expenses.filter(expenses => expenses.id !== action.payload),
